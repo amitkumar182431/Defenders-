@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solvify - Smart Solutions</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Animated Background -->
+    <div class="background-animation">
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+    </div>
+
+    <!-- Header Section -->
+    <header>
+      <div class="logo-container">
+        <div class="logo">
+          <i class="fas fa-brain"></i>
+          <span>Solvify</span>
+        </div>
+        <p class="tagline">Your all-in-one solution for smart tools</p>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#tools">Tools</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="mobile-menu-btn">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </nav>
+      <div class="auth-buttons">
+        <button id="login-btn" class="btn login-btn">Login</button>
+        <button id="signup-btn" class="btn signup-btn">Sign Up</button>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section -->
+      <section id="home" class="hero">
+        <div class="hero-content">
+          <h1 class="title">Solve Problems Smarter with <span class="highlight">Solvify</span></h1>
+          <p class="subtitle">Access powerful tools to simplify complex tasks and boost your productivity</p>
+          <button class="btn cta-btn">Get Started <i class="fas fa-arrow-right"></i></button>
+        </div>
+        <div class="hero-image">
+          <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Problem solving illustration">
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section id="features" class="features">
+        <h2 class="section-title">Why Choose Solvify?</h2>
+        <div class="features-container">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-bolt"></i>
+            </div>
+            <h3>Fast Solutions</h3>
+            <p>Get instant results with our lightning-fast tools and algorithms</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-lock"></i>
+            </div>
+            <h3>Secure & Private</h3>
+            <p>Your data stays private with our secure encryption technology</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-sync-alt"></i>
+            </div>
+            <h3>Always Updated</h3>
+            <p>Our tools are constantly updated with the latest information</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <h3>Mobile Friendly</h3>
+            <p>Access all tools on any device with our responsive design</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tools Section -->
+      <section id="tools" class="tools">
+        <h2 class="section-title">Our Smart Tools</h2>
+        <div class="tools-container">
+          <div class="tool-card" data-tool="morse">
+            <div class="tool-icon">
+              <i class="fas fa-code"></i>
+            </div>
+            <h3>Morse Code Translator</h3>
+            <p>Convert text to Morse code and vice versa with ease</p>
+            <button class="btn tool-btn">Try Now</button>
+          </div>
+          <div class="tool-card" data-tool="calculator">
+            <div class="tool-icon">
+              <i class="fas fa-calculator"></i>
+            </div>
+            <h3>Advanced Calculator</h3>
+            <p>Perform complex calculations with our powerful calculator</p>
+            <button class="btn tool-btn">Try Now</button>
+          </div>
+          <div class="tool-card" data-tool="binary">
+            <div class="tool-icon">
+              <i class="fas fa-binary"></i>
+            </div>
+            <h3>Binary Translator</h3>
+            <p>Convert text to binary format and understand computer language</p>
+            <button class="btn tool-btn">Try Now</button>
+          </div>
+          <div class="tool-card" data-tool="periodic">
+            <div class="tool-icon">
+              <i class="fas fa-atom"></i>
+            </div>
+            <h3>Periodic Table Explorer</h3>
+            <p>Interactive periodic table to explore chemical elements</p>
+            <button class="btn tool-btn">Try Now</button>
+          </div>
+          <div class="tool-card" data-tool="mood">
+            <div class="tool-icon">
+              <i class="fas fa-smile"></i>
+            </div>
+            <h3>Mood Tracker</h3>
+            <p>Track and improve your mood with meditation techniques</p>
+            <button class="btn tool-btn">Try Now</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tool Interface Section -->
+      <section id="tool-interface" class="tool-interface hidden">
+        <div class="tool-header">
+          <button class="btn back-btn"><i class="fas fa-arrow-left"></i> Back to Tools</button>
+          <h2 id="tool-title">Tool Name</h2>
+        </div>
+        <div class="tool-content">
+          <!-- Tool content will be dynamically loaded here -->
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section id="testimonials" class="testimonials">
+        <h2 class="section-title">What Our Users Say</h2>
+        <div class="testimonials-container">
+          <div class="testimonial-card">
+            <div class="user-avatar">
+              <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="User Avatar">
+            </div>
+            <div class="testimonial-content">
+              <p>"Solvify has completely transformed how I approach problem-solving. The tools are intuitive and powerful!"</p>
+              <h4>Sarah Johnson</h4>
+              <p class="user-title">Data Scientist</p>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="user-avatar">
+              <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User Avatar">
+            </div>
+            <div class="testimonial-content">
+              <p>"I use the calculator and binary translator daily in my work. Solvify saves me hours every week!"</p>
+              <h4>Michael Chen</h4>
+              <p class="user-title">Software Engineer</p>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="user-avatar">
+              <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="User Avatar">
+            </div>
+            <div class="testimonial-content">
+              <p>"The mood tracker has helped me maintain better mental health. I love the meditation techniques!"</p>
+              <h4>Emily Rodriguez</h4>
+              <p class="user-title">Wellness Coach</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="about">
+        <h2 class="section-title">About Solvify</h2>
+        <div class="about-content">
+          <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Team working together">
+          </div>
+          <div class="about-text">
+            <h3>Our Mission</h3>
+            <p>At Solvify, we're dedicated to making complex problem-solving accessible to everyone. Our suite of tools is designed to simplify tasks, boost productivity, and make learning enjoyable.</p>
+            <h3>Our Story</h3>
+            <p>Founded in 2025, Solvify began as a small project to help students with their daily challenges. Today, we've grown into a comprehensive platform serving thousands of users worldwide.</p>
+            <h3>Our Values</h3>
+            <ul>
+              <li><i class="fas fa-check-circle"></i> Simplicity in design</li>
+              <li><i class="fas fa-check-circle"></i> Accuracy in results</li>
+              <li><i class="fas fa-check-circle"></i> Privacy and security</li>
+              <li><i class="fas fa-check-circle"></i> Continuous improvement</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-container">
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <p>123 Innovation Street, Tech City, TC 12345</p>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <p>hello@solvify.com</p>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <p>+1 (555) 123-4567</p>
+            </div>
+            <div class="social-links">
+              <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+          <form class="contact-form">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn submit-btn">Send Message</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-logo">
+          <i class="fas fa-brain"></i>
+          <span>Solvify</span>
+        </div>
+        <p>Your all-in-one solution for smart tools and quick answers.</p>
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#tools">Tools</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Tools</h4>
+            <ul>
+              <li><a href="#" data-tool="morse">Morse Code</a></li>
+              <li><a href="#" data-tool="calculator">Calculator</a></li>
+              <li><a href="#" data-tool="binary">Binary Translator</a></li>
+              <li><a href="#" data-tool="periodic">Periodic Table</a></li>  
+              <li><a href="#" data-tool="mood">Mood Tracker</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Cookie Policy</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Solvify | All Rights Reserved</p>
+      </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Login to Solvify</h2>
+        <form id="login-form">
+          <div class="form-group">
+            <label for="login-email">Email</label>
+            <input type="email" id="login-email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" name="password" required>
+          </div>
+          <div class="form-group remember-me">
+            <input type="checkbox" id="remember" name="remember">
+            <label for="remember">Remember me</label>
+          </div>
+          <button type="submit" class="btn submit-btn">Login</button>
+          <p class="form-footer">Don't have an account? <a href="#" id="switch-to-signup">Sign up</a></p>
+        </form>
+      </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div id="signup-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Create an Account</h2>
+        <form id="signup-form">
+          <div class="form-group">
+            <label for="signup-name">Full Name</label>
+            <input type="text" id="signup-name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="signup-email">Email</label>
+            <input type="email" id="signup-email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="signup-password">Password</label>
+            <input type="password" id="signup-password" name="password" required>
+          </div>
+          <div class="form-group">
+            <label for="signup-confirm">Confirm Password</label>
+            <input type="password" id="signup-confirm" name="confirm" required>
+          </div>
+          <div class="form-group terms">
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+          </div>
+          <button type="submit" class="btn submit-btn">Sign Up</button>
+          <p class="form-footer">Already have an account? <a href="#" id="switch-to-login">Login</a></p>
+        </form>
+      </div>
+    </div>
+
+    <!-- Tool Templates (Hidden) -->
+    <template id="morse-template">
+      <div class="tool-container morse-tool">
+        <p class="tool-description">Convert text to Morse code and vice versa with this simple tool.</p>
+        <div class="tool-controls">
+          <div class="input-group">
+            <label for="morse-input">Enter Text or Morse Code:</label>
+            <textarea id="morse-input" placeholder="Type here..."></textarea>
+          </div>
+          <div class="conversion-buttons">
+            <button id="text-to-morse" class="btn">Text to Morse</button>
+            <button id="morse-to-text" class="btn">Morse to Text</button>
+          </div>
+          <div class="output-group">
+            <label for="morse-output">Result:</label>
+            <textarea id="morse-output" readonly></textarea>
+            <button id="copy-morse" class="btn copy-btn"><i class="fas fa-copy"></i> Copy</button>
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <template id="calculator-template">
+      <div class="tool-container calculator-tool">
+        <p class="tool-description">A powerful calculator for basic and advanced calculations.</p>
+        <div class="calculator">
+          <div class="calculator-display">
+            <div class="previous-operand"></div>
+            <div class="current-operand">0</div>
+          </div>
+          <div class="calculator-buttons">
+            <button class="clear span-2">AC</button>
+            <button class="delete">DEL</button>
+            <button class="operator">÷</button>
+            <button class="number">7</button>
+            <button class="number">8</button>
+            <button class="number">9</button>
+            <button class="operator">×</button>
+            <button class="number">4</button>
+            <button class="number">5</button>
+            <button class="number">6</button>
+            <button class="operator">-</button>
+            <button class="number">1</button>
+            <button class="number">2</button>
+            <button class="number">3</button>
+            <button class="operator">+</button>
+            <button class="number span-2">0</button>
+            <button class="number">.</button>
+            <button class="equals">=</button>
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <template id="binary-template">
+      <div class="tool-container binary-tool">
+        <p class="tool-description">Convert text to binary format and understand the language of computers.</p>
+        <div class="tool-controls">
+          <div class="input-group">
+            <label for="binary-input">Enter Text or Binary:</label>
+            <textarea id="binary-input" placeholder="Type here..."></textarea>
+          </div>
+          <div class="conversion-buttons">
+            <button id="text-to-binary" class="btn">Text to Binary</button>
+            <button id="binary-to-text" class="btn">Binary to Text</button>
+          </div>
+          <div class="output-group">
+            <label for="binary-output">Result:</label>
+            <textarea id="binary-output" readonly></textarea>
+            <button id="copy-binary" class="btn copy-btn"><i class="fas fa-copy"></i> Copy</button>
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <template id="periodic-template">
+      <div class="tool-container periodic-tool">
+        <p class="tool-description">Explore the periodic table of elements with this interactive tool.</p>
+        <div class="periodic-controls">
+          <div class="search-element">
+            <label for="element-search">Search Element:</label>
+            <input type="text" id="element-search" placeholder="Enter element name or symbol">
+            <button id="search-btn" class="btn">Search</button>
+          </div>
+          <div class="element-categories">
+            <button class="category-btn" data-category="all">All</button>
+            <button class="category-btn" data-category="metal">Metals</button>
+            <button class="category-btn" data-category="nonmetal">Non-metals</button>
+            <button class="category-btn" data-category="noble-gas">Noble Gases</button>
+          </div>
+        </div>
+        <div class="periodic-table">
+          <!-- Simplified periodic table for demo -->
+          <div class="element" data-symbol="H" data-category="nonmetal">
+            <div class="atomic-number">1</div>
+            <div class="symbol">H</div>
+            <div class="name">Hydrogen</div>
+          </div>
+          <div class="element" data-symbol="He" data-category="noble-gas">
+            <div class="atomic-number">2</div>
+            <div class="symbol">He</div>
+            <div class="name">Helium</div>
+          </div>
+          <!-- More elements would be added here -->
+        </div>
+        <div class="element-details">
+          <h3>Element Details</h3>
+          <div id="element-info">
+            <p>Select an element to view details</p>
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <template id="mood-template">
+      <div class="tool-container mood-tool">
+        <p class="tool-description">Track and improve your mood with meditation and relaxation techniques.</p>
+        <div class="mood-tracker">
+          <h3>How are you feeling today?</h3>
+          <div class="mood-selection">
+            <div class="mood-option" data-mood="great">
+              <i class="fas fa-grin-stars"></i>
+              <span>Great</span>
+            </div>
+            <div class="mood-option" data-mood="good">
+              <i class="fas fa-smile"></i>
+              <span>Good</span>
+            </div>
+            <div class="mood-option" data-mood="okay">
+              <i class="fas fa-meh"></i>
+              <span>Okay</span>
+            </div>
+            <div class="mood-option" data-mood="bad">
+              <i class="fas fa-frown"></i>
+              <span>Bad</span>
+            </div>
+            <div class="mood-option" data-mood="awful">
+              <i class="fas fa-sad-tear"></i>
+              <span>Awful</span>
+            </div>
+          </div>
+          <div class="mood-notes">
+            <label for="mood-note">Add a note about your day:</label>
+            <textarea id="mood-note" placeholder="What made you feel this way?"></textarea>
+            <button id="save-mood" class="btn">Save Entry</button>
+          </div>
+        </div>
+        <div class="meditation-section">
+          <h3>Meditation Techniques</h3>
+          <div class="meditation-options">
+            <div class="meditation-option">
+              <h4>Breathing Exercise</h4>
+              <p>A simple 4-7-8 breathing technique to calm your mind.</p>
+              <button class="btn start-meditation" data-technique="breathing">Start</button>
+            </div>
+            <div class="meditation-option">
+              <h4>Body Scan</h4>
+              <p>A guided meditation to release tension from your body.</p>
+              <button class="btn start-meditation" data-technique="body-scan">Start</button>
+            </div>
+            <div class="meditation-option">
+              <h4>Mindfulness</h4>
+              <p>Practice being present and aware of your surroundings.</p>
+              <button class="btn start-meditation" data-technique="mindfulness">Start</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
